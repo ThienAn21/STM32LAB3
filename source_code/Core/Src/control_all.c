@@ -90,6 +90,14 @@ void blink_green(){
 	}
 }
 
+void increase_temp_time(){
+	temp_change_time++;
+	if(temp_change_time >= 100){
+		temp_change_time = 1;
+	}
+	time_road2 = temp_change_time;
+}
+
 void control_all(){
 	switch(status){
 	case INIT:
@@ -118,6 +126,18 @@ void control_all(){
 			setTimer2(250);
 			setTimer3(250);//0.25s
 			set_yellow_mode();
+		}
+		if(is_button_pressed_once(1) || is_button_pressed_hold(1)){
+			increase_temp_time();
+		}
+		if(is_button_pressed_once(2) || is_button_pressed_hold(2)){
+			time_red1 = temp_change_time;
+			time_green2 = time_red1 - time_yellow2;
+			if(time_green2 < 0 ){
+				time_green2 = 0;
+				time_yellow2 = time_red1;
+			}
+			time_road1 = time_red1;
 		}
 		break;
 	case SET_YELLOW_MODE:
