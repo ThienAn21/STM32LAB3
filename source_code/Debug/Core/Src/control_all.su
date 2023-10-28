@@ -1,0 +1,6 @@
+control_all.c:10:6:count_time	8	static
+control_all.c:17:6:set_normal_mode	4	static
+control_all.c:23:6:set_red_mode	8	static
+control_all.c:35:6:set_yellow_mode	8	static
+control_all.c:46:6:set_green_mode	8	static
+control_all.c:59:6:control_all	8	static
