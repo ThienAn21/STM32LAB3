@@ -171,6 +171,18 @@ void control_all(){
 			setTimer2(250);
 			set_normal_mode();
 		}
+		if(is_button_pressed_once(1) || is_button_pressed_hold(1)){
+			increase_temp_time();
+		}
+		if(is_button_pressed_once(2) || is_button_pressed_hold(2)){
+			time_green1 = temp_change_time;
+			time_red2 = time_green1 + time_yellow1;
+			if(time_red2 >= 100 ){
+				time_red2 = 99;
+				time_yellow1 = time_red2 - time_green1;
+			}
+			time_road1 = time_green1;
+		}
 		break;
 	default:
 		break;
