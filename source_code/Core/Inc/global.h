@@ -13,6 +13,7 @@
 #define SET_RED_MODE 2
 #define SET_YELLOW_MODE 3
 #define SET_GREEN_MODE 4
+#define ERROR_MODE 5
 
 extern int status;
 

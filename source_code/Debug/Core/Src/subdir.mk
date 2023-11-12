@@ -9,6 +9,8 @@ C_SRCS += \
 ../Core/Src/control_all.c \
 ../Core/Src/control_led7seg.c \
 ../Core/Src/control_lightTraffic.c \
+../Core/Src/displayLed7seg.c \
+../Core/Src/displayLightTraffic.c \
 ../Core/Src/global.c \
 ../Core/Src/main.c \
 ../Core/Src/software_timer.c \
@@ -23,6 +25,8 @@ OBJS += \
 ./Core/Src/control_all.o \
 ./Core/Src/control_led7seg.o \
 ./Core/Src/control_lightTraffic.o \
+./Core/Src/displayLed7seg.o \
+./Core/Src/displayLightTraffic.o \
 ./Core/Src/global.o \
 ./Core/Src/main.o \
 ./Core/Src/software_timer.o \
@@ -37,6 +41,8 @@ C_DEPS += \
 ./Core/Src/control_all.d \
 ./Core/Src/control_led7seg.d \
 ./Core/Src/control_lightTraffic.d \
+./Core/Src/displayLed7seg.d \
+./Core/Src/displayLightTraffic.d \
 ./Core/Src/global.d \
 ./Core/Src/main.d \
 ./Core/Src/software_timer.d \

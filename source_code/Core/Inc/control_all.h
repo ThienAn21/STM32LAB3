@@ -12,6 +12,8 @@
 #include "global.h"
 #include "software_timer.h"
 #include "button.h"
+#include "displayLightTraffic.h"
+#include "displayLed7seg.h"
 #include "control_lightTraffic.h"
 #include "control_led7seg.h"
 

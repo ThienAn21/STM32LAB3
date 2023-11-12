@@ -13,12 +13,7 @@ void control_lightTraffic(){
 
 	switch(state_lightTraffic){
 	case RED1_GREEN2:
-		HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, RESET);
-		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, SET);
-		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, SET);
-		HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, SET);
-		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, SET);
-		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, RESET);
+		red1_green2();
 		if(time_road2 <= 0){
 			state_lightTraffic = RED1_YELLOW2;
 			setTimer1(1000);//1s
@@ -27,12 +22,7 @@ void control_lightTraffic(){
 		}
 		break;
 	case RED1_YELLOW2:
-		HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, RESET);
-		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, SET);
-		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, SET);
-		HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, SET);
-		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, RESET);
-		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, SET);
+		red1_yellow2();
 		if(time_road2 <= 0){
 			state_lightTraffic = GREEN1_RED2;
 			setTimer1(1000);//1s
@@ -41,12 +31,7 @@ void control_lightTraffic(){
 		}
 		break;
 	case GREEN1_RED2:
-		HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, SET);
-		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, SET);
-		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, RESET);
-		HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, RESET);
-		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, SET);
-		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, SET);
+		green1_red2();
 		if(time_road1 <= 0){
 			state_lightTraffic = YELLOW1_RED2;
 			setTimer1(1000);//1s
@@ -55,12 +40,7 @@ void control_lightTraffic(){
 		}
 		break;
 	case YELLOW1_RED2:
-		HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, SET);
-		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, RESET);
-		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, SET);
-		HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, RESET);
-		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, SET);
-		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, SET);
+		yellow1_red2();
 		if(time_road1 <= 0){
 			state_lightTraffic = RED1_GREEN2;
 			setTimer1(1000);//1s
@@ -70,6 +50,25 @@ void control_lightTraffic(){
 		break;
 	default:
 		break;
+	}
+}
+
+void blink_red(){
+	if(timer3_flag == 1){
+		setTimer3(250);//0.25s
+		control_blink_red();
+	}
+}
+void blink_yellow(){
+	if(timer3_flag == 1){
+		setTimer3(250);//0.25s
+		control_blink_yellow();
+	}
+}
+void blink_green(){
+	if(timer3_flag == 1){
+		setTimer3(250);//0.25s
+		control_blink_green();
 	}
 }
 

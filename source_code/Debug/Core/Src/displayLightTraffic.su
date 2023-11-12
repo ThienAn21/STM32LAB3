@@ -1,0 +1,11 @@
+displayLightTraffic.c:9:6:red1_green2	8	static
+displayLightTraffic.c:17:6:red1_yellow2	8	static
+displayLightTraffic.c:25:6:green1_red2	8	static
+displayLightTraffic.c:33:6:yellow1_red2	8	static
+displayLightTraffic.c:41:6:all_red_on	8	static
+displayLightTraffic.c:49:6:all_yellow_on	8	static
+displayLightTraffic.c:57:6:all_green_on	8	static
+displayLightTraffic.c:65:6:control_blink_red	8	static
+displayLightTraffic.c:73:6:control_blink_yellow	8	static
+displayLightTraffic.c:81:6:control_blink_green	8	static
+displayLightTraffic.c:89:6:all_led_off	8	static

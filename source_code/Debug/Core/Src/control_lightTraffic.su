@@ -1,1 +1,4 @@
 control_lightTraffic.c:12:6:control_lightTraffic	8	static
+control_lightTraffic.c:56:6:blink_red	8	static
+control_lightTraffic.c:62:6:blink_yellow	8	static
+control_lightTraffic.c:68:6:blink_green	8	static

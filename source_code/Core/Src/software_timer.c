@@ -1,8 +1,6 @@
 /*
  * software_timer.c
  *
- *  Created on: Sep 24, 2022
- *      Author: KAI
  */
 
 #include "software_timer.h"

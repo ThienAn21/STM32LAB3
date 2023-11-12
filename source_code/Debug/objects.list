@@ -2,6 +2,8 @@
 "./Core/Src/control_all.o"
 "./Core/Src/control_led7seg.o"
 "./Core/Src/control_lightTraffic.o"
+"./Core/Src/displayLed7seg.o"
+"./Core/Src/displayLightTraffic.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"
 "./Core/Src/software_timer.o"
