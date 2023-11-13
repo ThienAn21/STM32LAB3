@@ -12,22 +12,17 @@ void control_led7seg(){
 		enable_seg = 1 - enable_seg;
 		setTimer2(250);//0.25s
 		if(enable_seg == 0){
-			HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, RESET);
-			HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET);
+			display7SEG_seg1_on();
 			display7SEG1(time_road1 % 10);
 			display7SEG2(time_road2 % 10);
 		}
 		else {
-			HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, SET);
-			HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, RESET);
+			display7SEG_seg2_on();
 			display7SEG1(time_road1 / 10);
 			display7SEG2(time_road2 / 10);
 		}
 	}
 }
-void led7seg1_on(){
-	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, RESET);
-	HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET);
-}
+
 
 

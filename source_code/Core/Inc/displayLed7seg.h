@@ -12,5 +12,7 @@
 void display7SEG1(int state);
 void display7SEG2(int state);
 void display7SEG_error();
+void display7SEG_seg1_on();
+void display7SEG_seg2_on();
 
 #endif /* INC_DISPLAYLED7SEG_H_ */

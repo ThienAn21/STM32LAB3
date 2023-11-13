@@ -215,3 +215,12 @@
 	  HAL_GPIO_WritePin(SEG2_F_GPIO_Port, SEG2_F_Pin, RESET);
 	  HAL_GPIO_WritePin(SEG2_G_GPIO_Port, SEG2_G_Pin, RESET);
   }
+
+  void display7SEG_seg1_on(){
+		HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, RESET);
+		HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, SET);
+  }
+  void display7SEG_seg2_on(){
+		HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, SET);
+		HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, RESET);
+  }

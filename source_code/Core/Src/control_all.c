@@ -146,8 +146,9 @@ void control_all(){
 			time_red2 = time_red1;
 			time_yellow2 = time_yellow1;
 			time_green2 = time_green1;
-			led7seg1_on();
+			display7SEG_seg1_on();
 			display7SEG_error();
+			all_led_off();
 			if(is_button_pressed_once(0) || is_button_pressed_hold(0) || timer3_flag == 1){
 				error_flag = 0;
 				setTimer3(100);

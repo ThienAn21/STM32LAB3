@@ -15,6 +15,5 @@
 
 
 void control_led7seg();
-void led7seg1_on();
 
 #endif /* INC_CONTROL_LED7SEG_H_ */
